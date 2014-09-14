@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MyActivity">
+
+    <TabHost
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/tabHost"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:id="@+id/tab_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:focusableInTouchMode="false">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Contacts"
+                        android:id="@+id/textView2"
+                        android:layout_gravity="center_horizontal"
+                        android:textStyle="bold"
+                        android:layout_marginTop="30px"
+                        android:textSize="60px" />
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/listView"
+                        android:layout_gravity="center_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab_create"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="100px"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Contact Creator"
+                        android:id="@+id/contact_name"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="60px"
+                        android:layout_marginTop="30px"
+                        android:textStyle="bold"
+                        android:layout_gravity="center_horizontal" />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="100px"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/txtname"
+                        android:hint="Name"
+                        android:layout_below="@+id/contact_name"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="30px"
+                        android:layout_marginTop="30px" />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="100px"
+                        android:inputType="phone"
+                        android:ems="10"
+                        android:id="@+id/txtphone"
+                        android:phoneNumber="true"
+                        android:hint="Phone Number"
+                        android:layout_below="@+id/txtname"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="30px"
+                        android:layout_marginTop="30px" />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="100px"
+                        android:inputType="textEmailAddress"
+                        android:ems="10"
+                        android:id="@+id/txtemail"
+                        android:hint="Email"
+                        android:layout_below="@+id/txtphone"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="30px"
+                        android:layout_marginTop="30px" />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="100px"
+                        android:inputType="textPostalAddress"
+                        android:ems="10"
+                        android:id="@+id/txtaddress"
+                        android:hint="Address"
+                        android:layout_below="@+id/txtemail"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="30px"
+                        android:layout_marginTop="30px" />
+
+                    <Button
+                        android:layout_width="500px"
+                        android:layout_height="wrap_content"
+                        android:text="Add"
+                        android:id="@+id/add_button"
+                        android:textSize="50px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:enabled="false"
+                        android:focusable="false"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="10px" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>
